@@ -7,10 +7,12 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prod": "http-server -p 8080 -c-1 dist/angularFire2"
   },
   "private": true,
   "dependencies": {
+    "@agm/core": "^1.0.0-beta.6",
     "@angular/animations": "~8.0.0",
     "@angular/cdk": "~8.0.0",
     "@angular/common": "~8.0.0",
@@ -23,6 +25,7 @@
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/pwa": "^0.800.1",
     "@angular/router": "~8.0.0",
+    "@angular/service-worker": "~8.0.0",
     "@types/marked": "^0.6.5",
     "contentful": "^7.6.0",
     "firebase": "^6.1.0",
