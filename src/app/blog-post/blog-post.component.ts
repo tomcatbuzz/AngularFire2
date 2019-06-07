@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/';
+import { ContentfulService } from '../contentful.service';
 
 @Component({
   selector: 'app-blog-post',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogPostComponent implements OnInit {
 
-  constructor() { }
+  lesson$: Observable<any>;
+
+  constructor(private contentful: ContentfulService) { }
 
   ngOnInit() {
+    this.contentful.logContent('');
+
+    this.lesson$ = this.contentful.getContent('');
   }
 
 }

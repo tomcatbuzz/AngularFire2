@@ -1,0 +1,49 @@
+@import '~@angular/material/theming';
+
+$app-primary: mat-palette($mat-teal);
+$app-accent: mat-palette($mat-blue-grey, A200, A100, A400);
+$app-warn: mat-palette($mat-red);
+
+$primary: mat-color($app-primary);
+$accent: mat-color($app-accent);
+$warn: mat-color($app-warn);
+
+$dark-primary: mat-palette($mat-blue-grey);
+$dark-accent:  mat-palette($mat-amber, 200, 100);
+$dark-warn:    mat-palette($mat-deep-orange);
+
+$dark-primary: mat-color($mat-blue-grey);
+$dark-accent: mat-color($mat-amber, 200, 100);
+$dark-warn: mat-color($mat-deep-orange);
+
+$teal-app-primary: mat-palette($mat-teal); 
+$teal-app-accent:  mat-palette($mat-yellow);
+$teal-app-warn:    mat-palette($mat-red);
+
+$teal-app-primary: mat-color($mat-teal); 
+$teal-app-accent:  mat-color($mat-yellow);
+$teal-app-warn:    mat-color($mat-red);
+  
+$purple-primary: mat-palette($mat-purple);
+$purple-accent: mat-palette($mat-light-green);
+$purple-warn: mat-palette($mat-red);
+
+$purple-primary: mat-color($mat-purple);
+$purple-accent: mat-color($mat-light-green);
+$purple-warn: mat-color($mat-red);
+  
+$pink-primary: mat-palette($mat-pink);
+$pink-accent: mat-palette($mat-yellow);
+$pink-warn: mat-palette($mat-red);
+
+$pink-primary: mat-color($mat-pink);
+$pink-accent: mat-color($mat-yellow);
+$pink-warn: mat-color($mat-red);
+  
+$deep-orange-primary: mat-palette($mat-deep-orange);
+$deep-orange-accent: mat-palette($mat-teal, 100);
+$deep-orange-warn: mat-palette($mat-red);
+
+$deep-orange-primary: mat-color($mat-deep-orange);
+$deep-orange-accent: mat-color($mat-teal, 100);
+$deep-orange-warn: mat-color($mat-red);
