@@ -3,7 +3,7 @@ import * as contentful from 'contentful';
 import { environment } from '../environments/environment';
 import { Observable } from 'rxjs';
 import { from } from 'rxjs';
-import 'rxjs/add/operator/map';
+import { map } from 'rxjs/operators';
 import * as marked from 'marked';
 
 @Injectable({
@@ -26,8 +26,8 @@ export class ContentfulService {
 
   // retrieves content mapped to its data fields Check RXJS 6 NOTE*************
   getContent(contentId) {
-    const promiseSource = this.client.getEntry(contentId);
-    return Observable.from(promiseSource).map(entry => entry.fields);
+    const promise = this.client.getEntry(contentId);
+    return Observable.fromPromise(promise).map(entry => entry.fields);
   }
 
   // convert markdown to string
