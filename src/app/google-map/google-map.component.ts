@@ -6,7 +6,7 @@ import { GeoService } from '../geo.service';
   templateUrl: './google-map.component.html',
   styleUrls: ['./google-map.component.scss']
 })
-export class GoogleMapComponent implements OnInit {
+export class GoogleMapComponent implements OnInit, OnDestroy {
 
   lat: number;
   lng: number;
@@ -21,7 +21,6 @@ export class GoogleMapComponent implements OnInit {
       .subscribe(hits => this.markers = hits);
   }
 
-  // tslint:disable-next-line:use-life-cycle-interface
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }

@@ -23,6 +23,16 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatMenuModule,
     MatCardModule,
     MatGridListModule
+  ],
+  exports: [
+    MatButtonModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatMenuModule,
+    MatCardModule,
+    MatGridListModule
   ]
 })
 export class MaterialModule { }
