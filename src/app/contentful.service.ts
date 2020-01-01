@@ -27,7 +27,7 @@ export class ContentfulService {
   // retrieves content mapped to its data fields Check RXJS 6 NOTE (INSTALL RXJS-COMPAT!!!********
   getContent(contentId) {
     const promise = this.client.getEntry(contentId);
-    return Observable.fromPromise(promise).map(entry => entry.fields);
+    return Observable.from(promise).map(entry => entry.fields);
   }
 
   // convert markdown to string

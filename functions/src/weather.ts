@@ -18,7 +18,7 @@ export const darkSkyProxy = functions.https.onRequest((req, res) => {
   });
 });
 
-function formatUrl(lat, lng) {
+function formatUrl(lat: any, lng: any) {
   const DARK_SKY_KEY = functions.config().darksky.key
   console.log(DARK_SKY_KEY)
   return `https://api.darksky.net/forecast/${DARK_SKY_KEY}/${lat},${lng}`

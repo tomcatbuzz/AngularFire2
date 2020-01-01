@@ -21,7 +21,6 @@ export class GoogleMapComponent implements OnInit, OnDestroy {
       .subscribe(hits => this.markers = hits);
   }
 
-  // tslint:disable-next-line:use-life-cycle-interface
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }

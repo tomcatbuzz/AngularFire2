@@ -16,7 +16,7 @@ export class GeoService {
   constructor(private db: AngularFireDatabase) {
     // Reference database location for the GeoFire
     this.dbRef = this.db.list('/locations');
-    this.geoFire = new GeoFire(this.dbRef.query.ref);
+    this.geoFire = new GeoFire(this.dbRef.$ref);
    }
 
    // Adds GeoFire data to database
@@ -31,17 +31,17 @@ export class GeoService {
    getLocations(radius: number, coords: Array<number>) {
      this.geoFire.query({
        center: coords,
-       radius: radius
+       radius
      })
      .on('key_entered', (key, location, distance) => {
        const hit = {
-         location: location,
-         distance: distance
+         location,
+         distance
        };
 
        const currentHits = this.hits.value;
-        currentHits.push(hit);
-        this.hits.next(currentHits);
+       currentHits.push(hit);
+       this.hits.next(currentHits);
      });
    }
 }
