@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import * as contentful from 'contentful';
 import { environment } from '../environments/environment';
-import { Observable } from 'rxjs';
-import { from } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, from } from 'rxjs';
+import 'rxjs/add/observable/fromPromise';
+import 'rxjs/add/operator/map';
 import * as marked from 'marked';
 
 @Injectable({
@@ -24,7 +24,7 @@ export class ContentfulService {
       .then((entry) => console.log(entry));
   }
 
-  // retrieves content mapped to its data fields Check RXJS 6 NOTE*************
+  // retrieves content mapped to its data fields Check RXJS 6 NOTE (INSTALL RXJS-COMPAT!!!********
   getContent(contentId) {
     const promise = this.client.getEntry(contentId);
     return Observable.fromPromise(promise).map(entry => entry.fields);

@@ -3,7 +3,7 @@ import * as functions from 'firebase-functions';
 // admin.initializeApp();
 // const cors = require('cors')({ origin: true });
 
-const firebaseConfig = JSON.parse(process.env.FIREBASE_CONFIG);
+const firebaseConfig = JSON.parse('process.env.FIREBASE_CONFIG');
 const SENDGRID_API_KEY = functions.config().sendgrid.key;
 
 const sgMail = require('@sendgrid/mail');
@@ -30,5 +30,5 @@ export const sendContactMessage = functions.database.ref('/messages/{pushKey}').
   };
   return sgMail.send(msg)
     .then(() => console.log('email sent!'))
-    .catch(err => console.log(err));
+    .catch((err: any) => console.log(err));
 });

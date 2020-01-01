@@ -38,6 +38,6 @@ export const topicNotifications = functions.https.onRequest((req, res) => {
     res.status(200).send('Blog subscribers have been notified')
   })
   .catch(err => {
-    res.status.bind(400).send('Messages failed to send')
+    res.status(400).send('Messages failed to send')
   });
 });
