@@ -31,8 +31,9 @@ export class LocalForecastComponent implements OnInit {
   }
 
   getForecast() {
-    this.forecast = this.weather.currentForecast(this.lat, this.lng)
-    .do(data => console.log(data));
+    this.forecast = this.weather.currentForecast(this.lat, this.lng);
+    // .pipe();
+    tap(data => console.log(data));
   }
 
   weatherIcon(icon) {

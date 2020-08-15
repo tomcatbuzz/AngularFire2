@@ -9,10 +9,10 @@ export const darkSkyProxy = functions.https.onRequest((req, res) => {
 
     const url = formatUrl(lat, lng)
 
-    return http.get(url).then(response => {
+    return http.get(url).then((response: any) => {
       return res.status(200).send(response.getBody());
     })
-    .catch(err => {
+    .catch((err: any) => {
       return res.status(400).send(err)
     })
   });

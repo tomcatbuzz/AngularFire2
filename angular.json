@@ -133,5 +133,8 @@
       }
     }
   },
-  "defaultProject": "angularFire2"
+  "defaultProject": "angularFire2",
+  "cli": {
+    "analytics": "0bc23384-59bf-46f2-8865-e38fdb5bda2c"
+  }
 }
